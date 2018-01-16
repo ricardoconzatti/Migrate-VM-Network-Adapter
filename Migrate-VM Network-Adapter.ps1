@@ -3,8 +3,8 @@
 # Latest update: January 2018
 # www.Solutions4Crowds.com.br
 ######################################################################
-$vCenter = "vcenter65.servicecwb.local"#"lab-vcsa148.s4c.local" # Default = 0
-$vCuser = "administrator@vsphere.local"#"administrator@vsphere.local" # Default = 0
+$vCenter = "0" # "lab-vcsa148.s4c.local" # Default = 0
+$vCuser = "0" # "administrator@vsphere.local" # Default = 0
 ######################################################################
 cls
 $S4Ctitle = "Migrate Virtual Machine Network Adapter v2.0"
