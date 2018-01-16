@@ -1,6 +1,6 @@
 # Migrate VM Network Adapter
 
-Este script é extremamente útil para migrar as interfaces de rede das máquinas virtuais de E1000 para VMXNET 3. Sei que quando é necessário efetuar esta modificação, muitos especialistas optam por editar o arquivo VMX de cada máquina virtual ou até mesmo remover a interface de rede E1000 e adicionar uma nova interface de rede VMXNET 3. Mas como todos sabem, se o MAC mudar, o sistema operacional guest irá identificar uma nova interface de rede, aí é necessário efetuar a reconfiguração do endereço IP. Dependendo da quantidade de máquinas virtuais, será muito trabalhoso (e desnecessário).
+Este script é extremamente útil para migrar as interfaces de rede das máquinas virtuais de E1000 / E1000E para VMXNET 3. Sei que quando é necessário efetuar esta modificação, muitos especialistas optam por editar o arquivo VMX de cada máquina virtual ou até mesmo remover a interface de rede E1000 e adicionar uma nova interface de rede VMXNET 3. Mas como todos sabem, se o MAC mudar, o sistema operacional guest irá identificar uma nova interface de rede, aí é necessário efetuar a reconfiguração do endereço IP. Dependendo da quantidade de máquinas virtuais, será muito trabalhoso (e desnecessário).
 
  - **Ações que o Script executa**
 	 - **Seleciona as máquinas virtuais do vCenter Server de 4 formas diferentes**
@@ -10,9 +10,9 @@ Este script é extremamente útil para migrar as interfaces de rede das máquina
 		 - Folder
 	 - **Efetua diversas verificações**
 		 - Se as VMs estão ligadas
-		 - Se as VMs possuem interface de rede e1000
+		 - Se as VMs possuem interface de rede E1000 ou E1000E
 	 - **Migração**
-		 - Com a VM desligada, ocorre a migração da interface de rede e1000 para VMXNET 3
+		 - Com a VM desligada, ocorre a migração da interface de rede E1000 e/ou E1000E para VMXNET 3
  - **Compatibilidade**
 	 - vSphere (ESXi e vCenter)
 		 - Testado nas versões 5.1, 5.5, 6.0 e 6.5
